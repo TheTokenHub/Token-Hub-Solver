@@ -1,0 +1,165 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>hektCaptcha</title>
+  <link rel="stylesheet" href="Extension files/popup.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <div class="tab" data-tab="hcaptcha">
+    <div class="header">
+      <div class="header_label_container">
+        <div class="header_label">
+          <img src="Extension files/main-icon.png" />
+        </div>
+      </div>
+    </div>
+
+    <div
+      style="
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+        min-height: 0px;
+      "
+    >
+      <div
+        style="
+          position: relative;
+          overflow: auto;
+          margin-bottom: -15px;
+          min-height: 15px;
+        "
+      >
+        <div class="scrolling_container">
+          <div class="settings_item_container">
+            <div class="settings_item">
+              <div class="bbflex">
+                <div class="bbflex">
+                  <img
+                    src="Extension files/open.png"
+                    width="23"
+                    height="23"
+                    dir="ltr"
+                  />
+                  <div class="settings_item_label bbflex">
+                    Automatic opening
+                  </div>
+                </div>
+                <div class="bbflex">
+                  <div class="settings_toggle on" data-settings="auto_open">
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="settings_description_container bbflex">
+              <div class="settings_description">
+                Automatically opens hcaptcha challenges
+              </div>
+            </div>
+          </div>
+
+          <div class="settings_item_container">
+            <div class="settings_item">
+              <div class="bbflex">
+                <div class="bbflex">
+                  <img
+                    src="Extension files/solve.png"
+                    width="23"
+                    height="23"
+                    dir="ltr"
+                  />
+                  <div class="settings_item_label bbflex">Automatic solve</div>
+                </div>
+                <div class="bbflex">
+                  <div class="settings_toggle on" data-settings="auto_solve">
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="settings_description_container bbflex">
+              <div class="settings_description">
+                Automatically solves hcaptcha challenges
+              </div>
+            </div>
+          </div>
+
+          <div class="settings_item_container">
+            <div class="settings_item">
+              <div class="bbflex">
+                <div class="bbflex">
+                  <img
+                    src="Extension files/time.png"
+                    width="23"
+                    height="23"
+                    dir="ltr"
+                  />
+                  <div class="settings_item_label bbflex">Opening time</div>
+                </div>
+              </div>
+            </div>
+            <div class="settings_description_container bbflex">
+              <div class="settings_description">
+                Milliseconds to delay opening
+              </div>
+              <input
+                type="number"
+                autocomplete="off"
+                spellcheck="false"
+                placeholder="Delay"
+                value="300"
+                class="settings_text text_input text_right small"
+                data-settings="click_delay_time"
+              />
+            </div>
+          </div>
+
+          <div class="settings_item_container">
+            <div class="settings_item">
+              <div class="bbflex">
+                <div class="bbflex">
+                  <img
+                    src="Extension files/time.png"
+                    width="23"
+                    height="23"
+                    dir="ltr"
+                  />
+                  <div class="settings_item_label bbflex">Solve time</div>
+                </div>
+              </div>
+            </div>
+            <div class="settings_description_container bbflex">
+              <div class="settings_description">
+                Milliseconds to delay solving
+              </div>
+              <input
+                type="number"
+                autocomplete="off"
+                spellcheck="false"
+                placeholder="Delay"
+                value="3000"
+                class="settings_text text_input text_right small"
+                data-settings="solve_delay_time"
+              />
+            </div>
+          </div>
+
+          <div class="footer">
+            <div>Version 1.1.0</div>
+            <div>Credits to Token Hub Team</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/Extension files/popup.js"></script>
+</body>

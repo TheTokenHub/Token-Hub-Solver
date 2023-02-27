@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Token Hub hCaptcha",
+  "version": "1.1.0",
+  "description": "Automatically solve hCaptcha By Token Hub Team",
+  "icons": {
+    "16": "Extension files/icon_16.png",
+    "32": "Extension files/icon_32.png",
+    "48": "Extension files/icon_48.png",
+    "128": "Extension files/icon_128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Token Hub hCaptcha",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage"],
+  "web_accessible_resources": [
+    {
+      "resources": ["dist/*"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "host_permissions": ["*://*.github.com/*", "*://*.githubusercontent.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.hcaptcha.com/captcha/*"],
+      "js": ["contentScript.js"],
+      "run_at": "document_end",
+      "all_frames": true,
+      "match_about_blank": false
+    }
+  ]
+}
